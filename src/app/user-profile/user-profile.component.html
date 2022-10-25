@@ -1,0 +1,24 @@
+<p>
+    <img src="{{user.photo}}" alt="Avatar" class="avatar">
+</p>
+<p>
+    Name : <strong>{{user.name}}</strong>
+</p>
+<p>
+    First Name : <strong>{{user.firstName}}</strong>
+</p>
+
+<p *ngIf="element === true">
+    Age: <strong>{{user.age}}</strong>
+</p>
+
+<button (click)="hidden()" class="btn btn-primary">
+    <span *ngIf="element === false">{{buttonOn}}</span>
+    <span *ngIf="element === true">{{buttonOff}}</span>
+</button>
+
+<p>
+    Quote : <strong>{{user.quote}}</strong>
+</p>
+
+<input type="text" placeholder="quotes" [(ngModel)]="user.quote">
